@@ -12,8 +12,6 @@ export async function getAllProducts(): Promise<IApiResult<Array<IProduct>>> {
         cache: "force-cache",
       },
     );
-
-    throw Error("Hallo");
   } catch (e: any) {
     // wenn hier ein fehler kommt, dann muss er serverseitig sein
     throw e;

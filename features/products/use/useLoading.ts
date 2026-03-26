@@ -1,12 +1,12 @@
-import { ref } from "vue";
+import { ref } from "vue"
 
 export function useLoading() {
-  const isLoading = ref(false);
+	const isLoading = ref(false)
 
-  const updateLoadingStatus = () => (isLoading.value = !isLoading.value);
+	const updateLoadingStatus = () => (isLoading.value = !isLoading.value)
 
-  return {
-    isLoading,
-    updateLoadingStatus,
-  };
+	return {
+		isLoading,
+		updateLoadingStatus,
+	}
 }

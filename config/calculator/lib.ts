@@ -6,6 +6,7 @@ export function Calculator() {
 
 	// Die Funktion bleibt verborgen
 	function privateFunction(): number {
+		console.log(privateMember)
 		return 10
 	}
 
@@ -27,3 +28,4 @@ Calculator.doAction(10, 20)
 
 // Hole die Methoden aus dem Objekt selbst
 const { publicFunction } = Calculator()
+publicFunction()

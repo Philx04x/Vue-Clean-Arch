@@ -1,16 +1,20 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue"
+import { onMounted, provide, ref } from "vue"
 import { getAllProducts } from "../api/product"
 import { useLoading } from "../use/useLoading"
 import CardProduct from "./CardProduct.vue"
 import type { IApiResult } from "../../../utils/networking/entities/ApiResult"
 import type { IProduct } from "../entities/entities"
 import ErrorLoadingBoundary from "../../shared/components/ErrorLoadingBoundary.vue"
-
+import { COLOR_SYMBOL } from "../di/di"
 const { updateLoadingStatus } = useLoading()
 const isError = ref(false)
 
 let apiResult = ref<IApiResult<IProduct[]> | undefined>(undefined)
+
+// Nehme hier DI vor
+const color = ref("blue")
+provide(COLOR_SYMBOL, color)
 
 onMounted(async () => {
 	updateLoadingStatus()

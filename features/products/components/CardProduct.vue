@@ -1,7 +1,16 @@
 <script setup lang="ts">
+import { inject } from "vue"
 import type { IProduct } from "../entities/entities"
+import { COLOR_SYMBOL } from "../di/di"
 
 const { product } = defineProps<{ product: IProduct }>()
+
+// Hole hier DI raus
+const data = inject(COLOR_SYMBOL)
+
+if (data) {
+	data.value = "red"
+}
 </script>
 
 <template>

@@ -7,7 +7,7 @@ import type { IApiResult } from "../../../utils/networking/entities/ApiResult"
 import type { IProduct } from "../entities/entities"
 import ErrorLoadingBoundary from "../../shared/components/ErrorLoadingBoundary.vue"
 
-const { isLoading, updateLoadingStatus } = useLoading()
+const { updateLoadingStatus } = useLoading()
 const isError = ref(false)
 
 let apiResult = ref<IApiResult<IProduct[]> | undefined>(undefined)

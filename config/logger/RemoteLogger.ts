@@ -12,7 +12,7 @@ class RemoteLogger implements ILogger {
 			entry: logEntry,
 		}
 
-		const response = await fetch(this.remoteLoggerUrl, {
+		await fetch(this.remoteLoggerUrl, {
 			method: "POST",
 			body: JSON.stringify(requestBody),
 		})

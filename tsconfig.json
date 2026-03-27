@@ -4,17 +4,20 @@
 		"paths": {
 			"@features/*": ["./features/*"],
 			"@assets/*": ["./src/assets/*"],
-			"@config/*": ["./config/*"]
+			"@config/*": ["./config/*"],
 		},
 
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noUncheckedSideEffectImports": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noUncheckedIndexedAccess": true,
+		"strictNullChecks": true,
 	},
 	"files": [],
 	"references": [
 		{ "path": "./tsconfig.app.json" },
-		{ "path": "./tsconfig.node.json" }
-	]
+		{ "path": "./tsconfig.node.json" },
+	],
 }
